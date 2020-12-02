@@ -130,19 +130,39 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+.Block_Work_Title {
+  color: #fff;
+  text-decoration: none;
+  font-size: 35px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+  display: flex;
+  position: relative;
+}
+
 @media (max-width: 767px) {
   .Background.lock {
     overflow: hidden;
   }
 
+  .Block_Work_list {
+    display: none;
+  }
+
   .Block_Work_list2 {
-    position: fixed;
+    position: flex;
     top: -100%;
     left: 0;
+    transition: all 0.4s ease 0s;
   }
 
   .Block_Work_list2.active {
+    display: flex;
     top: 0;
+    transition: all 0.4s ease 0s;
   }
 
   .header_burger {
@@ -231,17 +251,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0px 0px 25px 0px;
   }
 }
-.Block_Work_Title {
-  color: #fff;
-  text-decoration: none;
-  font-size: 35px;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  cursor: pointer;
-  position: relative;
-  text-transform: uppercase;
-}
-
 .Block_Work_list {
   background-color: #bab26a;
   transition: all 0.4s ease 0s;
@@ -287,6 +296,24 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   background-color: #000;
   height: 3px;
+}
+
+.content {
+  padding: 10px 10px 10px;
+  font-size: 15px;
+}
+
+.About_myself {
+  padding: 10px 30px;
+  font-size: 30px;
+  font-size: 35px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.Text_Content {
+  margin: auto;
 }
 
 .wrapper_footer {

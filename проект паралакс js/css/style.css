@@ -1,0 +1,301 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+.body {
+  background-color: #000;
+  height: 1000px;
+}
+
+.wrapper {
+  opacity: 0;
+  overflow: hidden;
+  transition: all 1s ease 0s;
+}
+
+.wrapper.active {
+  opacity: 1;
+}
+
+.wrapper.active .paralacks_rope {
+  opacity: 1;
+  transition: all 1s ease 2s;
+}
+
+.wrapper.active .par_waves {
+  opacity: 1;
+  transition: all 1s ease 0.5s;
+}
+
+.wrapper.active .paralacks_lighthouse {
+  bottom: -150px;
+  opacity: 1;
+  transition: all 2.5s ease 2.5s;
+}
+
+.page {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+}
+
+.palaracks {
+  flex: 1 0 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.palaracks:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, black 60%);
+}
+
+.paralacks_list {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.paralax_background {
+  position: absolute;
+  height: 110%;
+  width: 110%;
+  top: -5%;
+  left: -5%;
+  background: url("../img/background.jpg") 50% 100%/cover no-repeat;
+}
+
+.paralacks_rope {
+  position: absolute;
+  width: 120%;
+  left: -10%;
+  opacity: 0;
+}
+
+.paralacks_rope img {
+  width: 100%;
+}
+
+.paralacks_rope1 {
+  top: 5%;
+  transform: scale(1);
+}
+
+.par_el {
+  position: absolute;
+}
+
+.par_el span {
+  display: inline-block;
+  transform-origin: 50% 0;
+  width: 280px;
+  height: 280px;
+  margin: 0px 0px 0px 140px;
+  animation: swing 2s infinite alternate cubic-bezier(0.445, 0.03, 0.515, 0.955);
+}
+
+.paralacks_elments1 {
+  top: 65%;
+  left: 20%;
+}
+
+.paralacks_elments1 span {
+  background: url("../img/clouds/board-cloud-2.png") 0% 0%/100% no-repeat;
+}
+
+.paralacks_elments2 {
+  top: 62%;
+  left: 50%;
+}
+
+.paralacks_elments2 span {
+  background: url("../img/clouds/board-cloud-1.png") 0% 0%/80% no-repeat;
+}
+
+.paralacks_elments3 {
+  top: 68%;
+  left: 40%;
+}
+
+.paralacks_elments3 span {
+  background: url("../img/clouds/board-birds.png");
+}
+
+.paralacks_rope2 {
+  top: -1.66667%;
+  transform: scale(1.05556);
+}
+
+.paralacks_rope3 {
+  top: -11.66667%;
+  transform: scale(1.13889);
+}
+
+.paralacks_elments6 {
+  top: 52%;
+  left: 10%;
+}
+
+.paralacks_elments6 span {
+  background: url("../img/clouds/board-cloud-3.png") 0% 0%/100% no-repeat;
+}
+
+.par_waves {
+  position: absolute;
+  background: url("../img/waves/wave-plain.png") 0 0/auto 101% repeat-x;
+  left: -100%;
+  width: 300%;
+  opacity: 0;
+}
+
+.paralacks_wave1 {
+  bottom: 180px;
+  height: 86px;
+  background: url("../img/waves/wave-paint.png") 0 0/auto 101% repeat-x;
+  animation: waves 7 111111s 0.1s infinite linear;
+}
+
+.paralacks_wave2 {
+  bottom: 144px;
+  height: 115px;
+  animation: waves 6.111111s 0.1s infinite linear;
+}
+
+.paralacks_wave3 {
+  bottom: 90px;
+  height: 154px;
+  background: url("../img/waves/wave-paint.png") 0 0/auto 101% repeat-x;
+  animation: waves 6s 0.1s infinite linear;
+}
+
+.paralacks_lighthouse {
+  background: url("../img/lighthouse.png") 0 0/60% no-repeat;
+  height: 560px;
+  width: 320px;
+  bottom: -600px;
+  right: 12%;
+  position: absolute;
+  animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.445, 0.03, 0.515, 0.955);
+}
+
+.paralacks_wave4 {
+  bottom: -1px;
+  height: 230px;
+  animation: waves 5.77777s 0.1s infinite linear;
+}
+
+.paralacks_wave5 {
+  bottom: -72px;
+  height: 288px;
+  background: url("../img/waves/wave-paint.png") 0 0/auto 101% repeat-x;
+  animation: waves 4.911s 0.1s infinite linear;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotateZ(10deg);
+  }
+  100% {
+    transform: rotateZ(-10deg);
+  }
+}
+@keyframes waves {
+  0% {
+    transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+  }
+}
+@keyframes lighthouse {
+  0% {
+    transform: translate3d(15%, 0, 0) rotateZ(5deg);
+  }
+  100% {
+    transform: translate3d(15%, 0, 0) rotateZ(-5deg);
+  }
+}
+.content {
+  color: #fff;
+}
