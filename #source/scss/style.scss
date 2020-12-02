@@ -1,0 +1,257 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+.Background{
+    background-color:#6abab2;
+}
+.head {
+ position: fixed;
+ z-index: 50;
+ width: 100%;
+ top:0;
+ left:0;
+}
+
+.head:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background-color: #000;
+    z-index: 3;
+}
+
+.header_content {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+
+.header_burger {
+    display: none;
+}
+
+
+.header_list li {
+    margin: 0px 0px 0px 30px;
+}
+
+.header_list {
+    display: flex;
+    position: relative;
+    z-index: 5;
+}  
+
+.hedear_link { 
+    color: #fff;
+    text-decoration: none;
+    font-size: 35px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+.Block_Work_list2{
+    display: none;
+}
+.header_menu {}
+@media (max-width: 767px){
+    .Background.lock{
+        overflow: hidden;
+    }
+
+    .Block_Work_list2 {
+     position: fixed;
+     top:-100%;
+     left:0;
+    }
+    .Block_Work_list2.active {
+        top:0;
+    }
+        .header_burger{
+        padding: 0px 0px 0px 0px; 
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 5;
+    }
+    .head{
+        z-index: 6;
+        height: 80px;
+    }
+    .header_burger span{
+       background-color: #fff;
+        content:'';
+        position: absolute;
+        left:10px;
+        width: 100%;
+        height: 3px;
+        top:8.5px;
+        transition: all 0.4s ease 0s;
+        
+    }
+    .header_content{}
+    .header_burger:before,
+    .header_burger:after{
+        background-color:#fff;
+        content:'';
+        position: absolute;
+        left:10px;
+        width: 100%;
+        height: 3px;
+        transition: all 0.4s ease 0s;
+       
+
+    }
+     .header_burger.active span{
+        transform: scale(0);
+
+    }
+
+    .header_burger:before{
+        top:0;
+       
+    }
+    .header_burger:after{
+        bottom:0;
+    }
+    .header_burger.active:before{
+        transform: rotate(45deg);
+        top:9px;
+    }
+     .header_burger.active:after{
+        transform: rotate(-45deg);
+        bottom:9px;
+    }
+    .header_menu {
+    position: fixed;
+    top:-100%;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background-color: #bab26a;
+    padding: 80px 0px 0px 0px;
+    transition:all 0.4s ease 0s;
+    overflow: auto;
+}
+.header_menu.active{
+    top:0; 
+}
+
+.head{
+    height: 70px;
+}
+
+.header_list{
+    display: block;
+}
+
+.header_list li{
+   padding: 0px 0px 25px 0px;
+    }
+}
+.Block {}
+.Block_Work_Title { 
+    color: #fff;
+    text-decoration: none;
+    font-size: 35px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.Block_Work_list {
+    background-color: #bab26a;
+    transition:all 0.4s ease 0s;
+    position: fixed;
+    top:-10%;
+    z-index: 0;
+    margin:0px 30px;
+    width: 120px;
+}
+
+@media (min-width: 768px){
+.Block_Work_list.active {
+ top:80px;
+ margin:0px 30px;
+ width: 120px;
+ z-index: 0;
+}
+}
+
+.swiper-container {
+   
+    margin: 50px;
+
+}
+.swiper-wrapper {}
+.swiper-slide {
+    padding: 70px 20px;
+}
+.img-slider {
+    text-align: center;
+}
+.img-slider img{
+    max-width: 100%;
+    margin: auto;
+}
+.swiper-pagination {
+}
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    color:#cc9fb5;
+    size:100px;
+}
+.line {
+    width: 100%;
+    background-color: #000;
+    height: 3px;
+}
+.wrapper_footer {
+    width: 100%;
+    bottom:0;
+    left:0;
+    height:100px;
+    background-color: #2b2b2b;
+    position: relative;
+}
+.footer_content {
+    
+    max-width: 1230px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+.Contact{
+    padding: 0px 20px ;
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+    color:#fff;
+}
+.Contacts img{
+    padding-bottom: 10px;
+    width: 20px;
+}
+.Contacts a{
+    color:#fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    margin: 0px 0px 0px 20px;
+}
+.laws{
+    color: #fff;
+    font-size: 10px;
+    bottom:0;
+}
+.law{
+ position: absolute;
+ bottom:0;
+ right:0;
+}
