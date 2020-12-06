@@ -6,10 +6,12 @@ $(document).ready(function(){
   $('.Block_Work_Title').click(function(event) {
     $('.Block_Work_list,.Block_Work_list2').toggleClass('active');
   });
-  $('.header_list').click(function(){ // по нажатию на элемент в меню
-$(".header_burger").addClass("collapsed") //  бургер
-$(".header_menu").removeClass("in") //  меню
-});
+   $('.hedear_link').click(function(event){
+    $('.header_burger,.header_menu').removeClass('active');
+  });
+   $( window ).scroll(function() {
+  $('.Block_Work_list').removeClass('active')
+ });
 });
 
 new Swiper('.swiper-container', {
@@ -34,3 +36,4 @@ new Swiper('.swiper-container', {
     onlyInViewport: false,
   },
 });
+
