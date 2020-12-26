@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*Обнуление*/
+@import url(https://allfont.ru/allfont.css?fonts=a_cooperblack);
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
 * {
   padding: 0;
@@ -378,7 +379,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   bottom: 0;
   left: 0;
-  height: 100px;
+  height: 133px;
   background-color: #2b2b2b;
   position: relative;
 }
@@ -397,15 +398,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-.Contacts img {
-  padding-bottom: 10px;
-  width: 20px;
-}
-
 .Contacts a {
   color: #fff;
   font-family: "Oswald", sans-serif;
-  font-size: 12px;
+  font-size: 17px;
   margin: 0px 0px 0px 20px;
 }
 
@@ -419,4 +415,51 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.Logo_text {
+  z-index: 4;
+}
+
+#demo-svg path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 0;
+}
+
+.mainblock {
+  padding-top: 10px;
+  display: flex;
+}
+
+.fa-vk {
+  font-size: 25px;
+  margin-top: 5px;
+  margin-left: 40px;
+  color: #fff;
+}
+
+.fa-envelope {
+  font-size: 25px;
+  margin-top: 5px;
+  margin-left: 40px;
+  color: #fff;
+}
+
+.fa-discord {
+  font-size: 25px;
+  margin-top: 5px;
+  margin-left: 40px;
+  color: #fff;
+}
+
+.fa-discord:hover {
+  color: #21c71e;
+}
+
+.fa-vk:hover {
+  color: #2869c9;
+}
+
+.fa-envelope:hover {
+  color: #c5db35;
 }
