@@ -3,8 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 .Background{
-    background-color:#6abab2;
-}
+background-image: radial-gradient( circle 827px at 47.3% 48%,  rgba(255,255,255,1) 0%, rgba(138,192,216,1) 90% );}
 .head {
  position: fixed;
  z-index: 50;
@@ -13,6 +12,66 @@
  left:0;
 
 }
+.top{
+    position: fixed;
+    z-index: 50;
+    right:15px;
+    bottom:15px;
+    -webkit-border-radius: 90px;
+    -moz-border-radius: 90px;
+    border-radius: 90px;
+    background-color: #000;
+    content: '';
+    postion: absolute;
+    width: 50px;
+    height: 50px;
+
+
+}
+.topf {
+    position: fixed;
+    z-index: 40;
+    right:15px;
+    bottom:15px;
+    -webkit-border-radius: 90px;
+    -moz-border-radius: 90px;
+    border-radius: 90px;
+    background-color: #404242;
+    content: '';
+    postion: absolute;
+    width: 50px;
+    height: 50px;
+    animation-name: circle;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;   
+}
+
+.fa-angle-double-up{
+    color:#fff;
+    font-size: 35px;
+    padding: 9px 14px;  
+}
+@keyframes circle{
+0%{
+ width: 50px;
+ height: 50px;
+ right:15px;
+ bottom:15px;
+}
+100%{
+    width: 60px;
+    height: 60px;
+    right:10px;
+    bottom:10px;
+}
+}
+
+
 .head:before{
     content: '';
     position: absolute;
@@ -20,7 +79,7 @@
     height: 100%;
     top:0;
     left:0;
-    background-color: #000;
+    background-color: #3A4750;
     z-index: 3;
 }
 
@@ -76,6 +135,8 @@
 
 }
 @media (max-width: 767px){
+    .Background{
+background-image: radial-gradient( circle 827px at 47.3% 48%,  rgba(214, 245, 255) 0%, rgba(138,192,216,1) 90% );}
     .Bl_Inf {
         flex-direction:column;
 -moz-border-radius-topleft: 27px;
@@ -94,7 +155,7 @@ border-bottom-left-radius: 5px;
     margin: auto ;
     width:90%;
     height: 500px;
-    background-color: #282452;
+    background-color: #505d66;
     display: flex;
     justify-content: space-between;
 }
@@ -103,7 +164,7 @@ border-bottom-left-radius: 5px;
     margin: auto;
     width: 80%;
     height: 90px;
-    background-color: #48d9be;
+    background-color: #E0F7FF;
     border-radius: 10px;
        font-size: 12px;
      font-family: 'Oswald';
@@ -157,7 +218,7 @@ border-bottom-left-radius: 5px;
 
     }
     .Block_Work_list2.active li {
-        
+
     }
 
   
@@ -222,7 +283,7 @@ border-bottom-left-radius: 5px;
     left:0;
     height: 100%;
     width: 100%;
-    background-color: #bab26a;
+    background-color: #505d66;
     padding: 80px 0px 0px 0px;
     transition:all 0.4s ease 0s;
     overflow: auto;
@@ -247,18 +308,19 @@ border-bottom-left-radius: 5px;
 
 
 .Block_Work_list {
-    background-color: #bab26a;
+    background-color: #181a17e1;
     transition:all 0.4s ease 0s;
     position: fixed;
-    top:-10%;
+    top:-30%;
     z-index: 0;
-    margin:0px 30px;
-    width: 120px;
+    margin:0px 0px;
+    width: 160px;
 }
 
 
 @media (min-width: 768px){
-    .Bl_Inf {
+
+.Bl_Inf {
 -moz-border-radius-topleft: 27px;
 -webkit-border-top-left-radius: 27px;
  border-top-left-radius: 27px;
@@ -275,7 +337,7 @@ border-bottom-left-radius: 5px;
     margin: auto ;
     width:90%;
     height: 500px;
-    background-color: #282452;
+    background-color: #505d66;
     display: flex;
     justify-content: space-between;
 }
@@ -284,7 +346,7 @@ border-bottom-left-radius: 5px;
     margin: auto;
     width: 20%;
     height: 400px;
-    background-color: #48d9be;
+    background-color: #E0F7FF;
     border-radius: 10px;
     font-size: 19px;
      font-family: 'Oswald';
@@ -301,23 +363,40 @@ border-bottom-left-radius: 5px;
     height: 420px;
     font-size: 21px;
 }
-
+.Block_Work_list li{
+      font-size: 20px;
+     font-family: 'Oswald';
+    padding: 10px 10px;
+    color:#fff;
+     padding: 10px 10px;}
+.Block_Work_list.active li{
+     font-size: 20px;
+     font-family: 'Oswald';
+    padding: 10px 10px;
+    color:#fff;
+}
 .Block_Work_list.active {
  font-size: 18px;
  display: flex;
  top:80px;
- margin:0px 30px;
- width: 120px;
+ margin:0px 0px;
+ width: 160px;
  z-index: 0;
+
 }
 .Block_Work_list.active li{
     padding-bottom: 10px;
-}
+   color:#fff;
 }
 
+.first{
+    color:#fff;
+    font-family: 'Oswald';
+}
+}
 .swiper-container {
-   
-    margin: 50px;
+    /*background-color: #fff;*/
+    margin: 100px;
 
 }
 .swiper-wrapper {}
@@ -335,12 +414,12 @@ border-bottom-left-radius: 5px;
 }
 .swiper-button-prev::after,
 .swiper-button-next::after{
-    color:#cc9fb5;
+    color:#fff;
     size:100px;
 }
 .line {
     width: 100%;
-    background-color: #000;
+    /*background-color: #000;*/
     height: 3px;
 }
 .space{
@@ -349,7 +428,7 @@ border-bottom-left-radius: 5px;
 }
 .line1 {
     width: 100%;
-    background-color: #000;
+     /*background-color: #000;*/
     height: 3px;
 }
 .ColorTwo{
@@ -365,7 +444,7 @@ border-bottom-left-radius: 5px;
 
 .content {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     font-size: 21px;
 }
 
@@ -473,14 +552,13 @@ color:#fff;}
     color:#cf6591;
 }
 .fa-discord:hover{
-    color: #21c71e;
-
+    color: #6a5fb3;
 }
 
 .fa-vk:hover {
-   color: #2869c9
+   color: #2869c9;
 }
 
 .fa-envelope:hover{
-   color: #c5db35
+   color: #1e77fc;
 }

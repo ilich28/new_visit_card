@@ -15,7 +15,18 @@ $(document).ready(function(){
   $('.Block_Work_list').removeClass('active');
    $('.Background').removeClass('lock');
  });
+   $('#up').click(function() {  
+    $('body,html').animate({scrollTop:0},500);  
+    return false;  
+  })  ;
+    $("#menu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
 });
+
 
 new Swiper('.swiper-container', {
   navigation: {
@@ -37,6 +48,17 @@ new Swiper('.swiper-container', {
   keyboard: {
     enabled: true,
     onlyInViewport: false,
+  },
+  breakpoints: {
+    320:{
+      slidesPerView:1,
+    },
+    480:{
+      slidesPerView:2,
+    },
+    992:{
+      slidesPerView:3,
+    },
   },
 });
 
