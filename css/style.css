@@ -87,11 +87,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .top {
   position: fixed;
-  z-index: 50;
+  z-index: 40;
   right: 15px;
   bottom: 15px;
   border-radius: 90px;
-  background-color: #000;
+  background-color: #0000008d;
   content: "";
   postion: absolute;
   width: 50px;
@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   border-radius: 90px;
-  background-color: #404242;
+  background-color: #505454ca;
   content: "";
   postion: absolute;
   width: 50px;
@@ -351,6 +351,14 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
   }
 
+  .top.active {
+    display: none;
+  }
+
+  .topf.active {
+    display: none;
+  }
+
   .head {
     height: 70px;
   }
@@ -367,7 +375,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #181a17e1;
   transition: all 0.4s ease 0s;
   position: fixed;
-  top: -30%;
+  top: -34%;
   z-index: 0;
   margin: 0px 0px;
   width: 160px;
@@ -413,7 +421,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .Block_Work_list li {
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Oswald";
     padding: 10px 10px;
     color: #fff;

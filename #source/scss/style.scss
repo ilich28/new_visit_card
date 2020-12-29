@@ -14,13 +14,13 @@ background-image: radial-gradient( circle 827px at 47.3% 48%,  rgba(255,255,255,
 }
 .top{
     position: fixed;
-    z-index: 50;
+    z-index: 40;
     right:15px;
     bottom:15px;
     -webkit-border-radius: 90px;
     -moz-border-radius: 90px;
     border-radius: 90px;
-    background-color: #000;
+    background-color: #0000008d;
     content: '';
     postion: absolute;
     width: 50px;
@@ -36,7 +36,7 @@ background-image: radial-gradient( circle 827px at 47.3% 48%,  rgba(255,255,255,
     -webkit-border-radius: 90px;
     -moz-border-radius: 90px;
     border-radius: 90px;
-    background-color: #404242;
+    background-color: #505454ca;
     content: '';
     postion: absolute;
     width: 50px;
@@ -287,11 +287,18 @@ border-bottom-left-radius: 5px;
     padding: 80px 0px 0px 0px;
     transition:all 0.4s ease 0s;
     overflow: auto;
+ 
 }
 .header_menu.active{
     top:0; 
-}
 
+}
+.top.active{
+    display: none;
+}
+.topf.active{
+    display: none;
+}
 .head{
     height: 70px;
 }
@@ -562,3 +569,4 @@ color:#fff;}
 .fa-envelope:hover{
    color: #1e77fc;
 }
+

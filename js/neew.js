@@ -2,6 +2,7 @@ $(document).ready(function(){
   $('.header_burger').click(function(event){
     $('.header_burger,.header_menu').toggleClass('active');
     $('.Background').toggleClass('lock');
+    $('.top,.topf').toggleClass('active');
   });
   
   $('.Block_Work_Title').click(function(event) {
@@ -10,10 +11,12 @@ $(document).ready(function(){
    $('.hedear_link').click(function(event){
     $('.header_burger,.header_menu').removeClass('active');
     $('.Background').removeClass('lock');
+    $('.top,.topf').removeClass('active');
   });
    $( window ).scroll(function() {
   $('.Block_Work_list').removeClass('active');
    $('.Background').removeClass('lock');
+   $('.top,.topf').removeClass('active');
  });
    $('#up').click(function() {  
     $('body,html').animate({scrollTop:0},500);  
@@ -61,7 +64,7 @@ new Swiper('.swiper-container', {
     },
   },
 });
-
+var changes = 0;
 anime({
   targets:'#demo-svg path',
   strokeDashoffset:[anime.setDashoffset, 0],
@@ -69,4 +72,11 @@ anime({
   duration:10000,
   direction:'alternate',
   loop:false,
+});
+anime({
+  targets: '.Text_Content',
+  translateX: [100, 150], // from 100 to 250
+  delay: 500,
+  direction: 'alternate',
+  loop: false,
 });
