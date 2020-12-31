@@ -3,6 +3,7 @@ $(document).ready(function(){
     $('.header_burger,.header_menu').toggleClass('active');
     $('.Background').toggleClass('lock');
     $('.top,.topf').toggleClass('active');
+    $('.Block_Work_list2').removeClass('active');
   });
   
   $('.Block_Work_Title').click(function(event) {
@@ -28,6 +29,21 @@ $(document).ready(function(){
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1500);
     });
+ $(window).scroll(function(){
+    if  ($(window).scrollTop() > 300)
+        $('.top').animate({'right':'15px'},500);
+        else
+        $('.top').stop(true).animate({'right':'-230px'},500);   
+    });
+ $(window).scroll(function (event) {
+    var top = $(window).scrollTop();
+     if(top >= 340){$('.topf').addClass('fall');
+       
+     } else {
+      $('.topf').removeClass('fall');
+     }
+});
+
 });
 
 
@@ -80,3 +96,58 @@ anime({
   direction: 'alternate',
   loop: false,
 });
+anime({
+  targets: '.fa-angle-double-up',
+  translateY: 3,
+  direction: 'alternate',
+  loop: true,
+  easing: 'easeInOutSine'
+});
+var isScrolling = false;
+ 
+    window.addEventListener("scroll", throttleScroll, false);
+ 
+    function throttleScroll(e) {
+      if (isScrolling == false) {
+        window.requestAnimationFrame(function() {
+          scrolling(e);
+          isScrolling = false;
+        });
+      }
+      isScrolling = true;
+    }
+    
+    document.addEventListener("DOMContentLoaded", scrolling, false);
+ 
+    var listItems = document.querySelectorAll(".content");
+
+ 
+    function scrolling(e) {
+ 
+          for (var i = 0; i < listItems.length; i++) {
+        var listItem = listItems[i];
+ 
+        if (isPartiallyVisible(listItem)) {
+          listItem.classList.add("active");
+        } 
+      }
+    }
+ 
+    function isPartiallyVisible(el) {
+      var elementBoundary = el.getBoundingClientRect();
+ 
+      var top = elementBoundary.top;
+      var bottom = elementBoundary.bottom;
+      var height = elementBoundary.height;
+ 
+      return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+    }
+ 
+    function isFullyVisible(el) {
+      var elementBoundary = el.getBoundingClientRect();
+ 
+      var top = elementBoundary.top;
+      var bottom = elementBoundary.bottom;
+ 
+      return ((top >= 0) && (bottom <= window.innerHeight));
+    }

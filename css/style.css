@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
 .top {
   position: fixed;
   z-index: 40;
-  right: 15px;
+  right: -230px;
   bottom: 15px;
   border-radius: 90px;
   background-color: #0000008d;
@@ -98,10 +98,17 @@ h1, h2, h3, h4, h5, h6 {
   height: 50px;
 }
 
+.topf.fall {
+  opacity: 1;
+  transition: 16s;
+}
+
 .topf {
+  opacity: 0;
+  transition: 0.3s;
   position: fixed;
   z-index: 40;
-  right: 15px;
+  right: -120px;
   bottom: 15px;
   border-radius: 90px;
   background-color: #505454ca;
@@ -122,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
 .fa-angle-double-up {
   color: #fff;
   font-size: 35px;
-  padding: 9px 14px;
+  padding: 5px 14.5px;
 }
 
 @keyframes circle {
@@ -197,7 +204,32 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
+.c1.active {
+  font-weight: bold;
+  transform: translate3d(0, 0, 0);
+  transition: all 1s 200ms;
+  opacity: 1;
+}
+
+.c2.active {
+  font-weight: bold;
+  transform: translate3d(0, 0, 0);
+  transition: all 1s 300ms;
+  opacity: 1;
+}
+
+.c3.active {
+  font-weight: bold;
+  transform: translate3d(0, 0, 0);
+  transition: all 1s 350ms;
+  opacity: 1;
+}
+
 @media (max-width: 767px) {
+  .last_content {
+    display: none;
+  }
+
   .Background {
     background-image: radial-gradient(circle 827px at 47.3% 48%, #d6f5ff 0%, #8ac0d8 90%);
   }
@@ -268,13 +300,24 @@ h1, h2, h3, h4, h5, h6 {
     position: flex;
     top: -100%;
     left: 0;
-    transition: all 0.4s ease 0s;
+    transition: all 0.2s ease 0s;
   }
 
   .Block_Work_list2.active {
     display: flex;
     top: 0;
     transition: all 0.4s ease 0s;
+    font-size: 18px;
+    padding: 16px 1px;
+  }
+
+  .first {
+    color: #fff;
+  }
+
+  .Block_Work_list2.active li {
+    color: #fff;
+    font-family: "Oswald";
   }
 
   .header_burger {
@@ -508,6 +551,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content {
+  font-weight: bold;
+  transform: translate3d(-230px, 0, 0);
+  opacity: 0;
   padding-top: 50px;
   padding-bottom: 10px;
   font-size: 21px;
@@ -633,4 +679,102 @@ h1, h2, h3, h4, h5, h6 {
 
 .fa-envelope:hover {
   color: #1e77fc;
+}
+
+.Text_Content.animate {
+  font-weight: bold;
+  transform: translate3d(0, 0, 0);
+  transition: all 1s 350ms;
+  opacity: 1;
+}
+
+.last_content {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  height: 60px;
+  overflow: hidden;
+  font-family: "Lato", sans-serif;
+  font-size: 35px;
+  line-height: 40px;
+  color: #ecf0f1;
+}
+.last_content__container {
+  width: 350px;
+  font-weight: 500;
+  overflow: hidden;
+  height: 40px;
+  padding: 0 40px;
+}
+.last_content__container:before {
+  content: "{";
+  left: 0;
+}
+.last_content__container:after {
+  content: "}";
+  position: absolute;
+  right: 0;
+}
+.last_content__container:after, .last_content__container:before {
+  position: absolute;
+  top: 0;
+  color: #16a085;
+  font-size: 42px;
+  line-height: 40px;
+  -webkit-animation-name: opacity;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.last_content__container__text {
+  display: inline;
+  float: left;
+  margin: 10;
+}
+.last_content__container__list {
+  margin-top: 0;
+  padding-left: 162px;
+  text-align: left;
+  list-style: none;
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: change;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.last_content__container__list__item {
+  line-height: 40px;
+  margin: 0;
+}
+@keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes change {
+  0%, 12.66%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  16.66%, 29.32% {
+    transform: translate3d(0, -25%, 0);
+  }
+  33.32%, 45.98% {
+    transform: translate3d(0, -50%, 0);
+  }
+  49.98%, 62.64% {
+    transform: translate3d(0, -75%, 0);
+  }
+  66.64%, 79.3% {
+    transform: translate3d(0, -50%, 0);
+  }
+  83.3%, 95.96% {
+    transform: translate3d(0, -25%, 0);
+  }
 }
