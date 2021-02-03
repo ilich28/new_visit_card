@@ -5,7 +5,12 @@ $(document).ready(function(){
     $('.top,.topf').toggleClass('active');
     $('.Block_Work_list2').removeClass('active');
   });
-  
+       var form1 = new ProcessForm();
+        form1.init();
+
+    });
+
+
   $('.Block_Work_Title').click(function(event) {
     $('.Block_Work_list,.Block_Work_list2').toggleClass('active');
   });
@@ -17,7 +22,7 @@ $(document).ready(function(){
    $( window ).scroll(function() {
   $('.Block_Work_list').removeClass('active');
    $('.Background').removeClass('lock');
-   $('.top,.topf').removeClass('active');
+   $('.top,.topf').removeClass('active');1
  });
    $('#up').click(function() {  
     $('body,html').animate({scrollTop:0},500);  
@@ -43,8 +48,31 @@ $(document).ready(function(){
       $('.topf').removeClass('fall');
      }
 });
+ $(document).ready(function() {
 
+   $('.fa-cloud,.fa-html5,.fas,.fa-file-code,.fa-css3-alt,.fa-wordpress-simple,.layer,.fa-js-square,.fa-sticky-note,.fa-laptop,.fa-mobile-alt,.fa-desktop,.fa-php,.fa-pied-piper-square,.fa-brain,.fa-chart-line,.fa-code,.fa-cloud').addClass('active');
 });
+$(document).ready(function(){
+
+
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    smartBackspace: true,
+    backSpeed: 30,
+    typeSpeed: 50,
+    startDelay: 10,
+    backDelay: 5000, // пауза перед удалением текста
+    loop : true , 
+    loopCount : Infinity ,
+
+  });
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene,{
+      relativeInput: true,
+      clipRelativeInput: true, 
+});
+
+}); 
 
 
 new Swiper('.swiper-container', {
@@ -82,7 +110,7 @@ new Swiper('.swiper-container', {
 });
 var changes = 0;
 anime({
-  targets:'#demo-svg path',
+  targets:'.svg1',
   strokeDashoffset:[anime.setDashoffset, 0],
   easing:'easeInOutQuad',
   duration:10000,
@@ -90,12 +118,22 @@ anime({
   loop:false,
 });
 anime({
-  targets: '.Text_Content',
-  translateX: [100, 150], // from 100 to 250
-  delay: 500,
-  direction: 'alternate',
-  loop: false,
+  targets:'.svg2',
+  strokeDashoffset:[anime.setDashoffset, 0],
+  easing:'easeInOutQuad',
+  duration:10000,
+  direction:'alternate',
+  loop:true,
 });
+anime({
+  targets:'.svg3',
+  strokeDashoffset:[anime.setDashoffset, 0],
+  easing:'easeInOutQuad',
+  duration:20000,
+  direction:'alternate',
+  loop:true,
+});
+
 anime({
   targets: '.fa-angle-double-up',
   translateY: 3,
@@ -103,6 +141,10 @@ anime({
   loop: true,
   easing: 'easeInOutSine'
 });
+
+
+
+
 var isScrolling = false;
  
     window.addEventListener("scroll", throttleScroll, false);
@@ -119,10 +161,19 @@ var isScrolling = false;
     
     document.addEventListener("DOMContentLoaded", scrolling, false);
  
-    var listItems = document.querySelectorAll(".content");
+    var listItems = document.querySelectorAll(".content,.table,.money");
+    var listItems1 = document.querySelectorAll(".content,.table,.money");
 
- 
+  
     function scrolling(e) {
+    for (var i = 0; i < listItems1.length; i++) {
+        var listItem = listItems1[i];
+ 
+        if (isPartiallyVisible(listItem)) {
+          listItem.classList.add("active");
+        } 
+      }
+    }
  
           for (var i = 0; i < listItems.length; i++) {
         var listItem = listItems[i];
@@ -131,7 +182,8 @@ var isScrolling = false;
           listItem.classList.add("active");
         } 
       }
-    }
+
+
  
     function isPartiallyVisible(el) {
       var elementBoundary = el.getBoundingClientRect();
@@ -150,4 +202,5 @@ var isScrolling = false;
       var bottom = elementBoundary.bottom;
  
       return ((top >= 0) && (bottom <= window.innerHeight));
-    }
+    };
+ 
