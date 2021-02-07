@@ -2,6 +2,7 @@
 /*Обнуление*/
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif+Caption&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
 * {
@@ -185,8 +186,9 @@ h1, h2, h3, h4, h5, h6 {
     height: 400px;
     background-color: #E0F7FF;
     border-radius: 10px;
-    font-size: 19px;
-    font-family: "Oswald";
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Roboto Slab", serif;
     padding: 40px;
   }
 
@@ -1800,6 +1802,43 @@ button.btn-new {
   background-color: #0ca8a8;
 }
 
+.fastselect {
+  font-size: 50px;
+  font-family: "Oswald";
+  margin: auto;
+}
+
+.space1 {
+  padding-top: 80px;
+}
+
+.svg2 {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: dash 4s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 822;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+#demo-svg path {
+  stroke-dasharray: 330;
+  stroke-dashoffset: 0;
+}
+
+.NAMEWORK {
+  max-width: 100%;
+  margin-left: 90px;
+  margin-top: 100px;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
+}
+
 .Background {
   background-repeat: no-repeat;
   background: radial-gradient(circle 827px at 47.3% 48%, white 0%, #8ac0d8 90%) fixed;
@@ -1872,21 +1911,21 @@ button.btn-new {
 }
 
 .c1.active {
-  font-weight: bold;
   transform: translate3d(0, 0, 0);
   transition: all 1s 200ms;
   opacity: 1;
+  font-weight: 500;
 }
 
 .c2.active {
-  font-weight: bold;
+  font-weight: 500;
   transform: translate3d(0, 0, 0);
   transition: all 1s 300ms;
   opacity: 1;
 }
 
 .c3.active {
-  font-weight: bold;
+  font-weight: 500;
   transform: translate3d(0, 0, 0);
   transition: all 1s 350ms;
   opacity: 1;
@@ -1923,7 +1962,8 @@ button.btn-new {
     background-color: #E0F7FF;
     border-radius: 10px;
     font-size: 12px;
-    font-family: "Oswald";
+    font-weight: 500;
+    font-family: "Roboto Slab", serif;
     padding: 10px;
   }
 
@@ -2128,17 +2168,25 @@ button.btn-new {
 }
 
 .content {
-  font-weight: bold;
   transform: translate3d(-230px, 0, 0);
   opacity: 0;
   padding-top: 50px;
   padding-bottom: 10px;
   font-size: 21px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
 }
 
 .Adapt {
   font-size: 24px;
   text-decoration: underline;
+}
+
+.Whatisadaptiv {
+  font-size: 30px;
+  padding-bottom: 18px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 800;
 }
 
 .About_myself {
@@ -2151,7 +2199,6 @@ button.btn-new {
   padding-right: 30px;
   margin: auto;
   font-size: 40px;
-  font-family: "Oswald";
   color: #000;
 }
 
@@ -2163,46 +2210,50 @@ button.btn-new {
   padding-bottom: 30px;
 }
 
-/* If fade out option is set */
+.G {
+  color: #1f90e0;
+}
+
+.o1 {
+  color: #e01f1f;
+}
+
+.o2 {
+  color: #e0a01f;
+}
+
+.g {
+  color: #1f90e0;
+}
+
+.l {
+  color: #399c0b;
+}
+
+.e {
+  color: #e01f1f;
+}
+
+.Я {
+  color: #e01f1f;
+}
+
 .fa-lightbulb {
-  color: #565724;
   font-size: 60px;
   color: #ecf011;
 }
 
-.fastselect {
-  font-size: 50px;
-  font-family: "Oswald";
-  margin: auto;
+.fa-business-time {
+  font-size: 60px;
+  color: #ecf011;
 }
 
-.space1 {
-  padding-top: 80px;
+.fa-clock {
+  font-size: 60px;
+  color: #de4516;
 }
 
-.svg2 {
-  stroke-dasharray: 600;
-  stroke-dashoffset: 600;
-  animation: dash 4s linear alternate infinite;
-}
-
-@keyframes dash {
-  from {
-    stroke-dashoffset: 822;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-#demo-svg path {
-  stroke-dasharray: 330;
-  stroke-dashoffset: 0;
-}
-
-.NAMEWORK {
-  max-width: 100%;
-  margin-left: 90px;
-  margin-top: 100px;
-  margin-bottom: 0px;
-  padding-bottom: 20px;
+.fa-check-circle {
+  font-size: 60px;
+  color: #55de16;
 }
